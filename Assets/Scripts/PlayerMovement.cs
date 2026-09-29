@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RB.velocity = new Vector2(0, 0);
         if (Input.GetKey(KeyCode.W))
         {
             RB.velocity = new Vector2(0, 2);
