@@ -34,5 +34,26 @@ public class PlayerMovement : MonoBehaviour
         {
             RB.velocity = new Vector2(4, 0);
         }
+
+        // Dual inputs
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        {
+            RB.velocity = new Vector2(4, 4);
+        }
+
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+        {
+            RB.velocity = new Vector2(-4, 4);
+        }
+
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+        {
+            RB.velocity = new Vector2(4, -4);
+        }
+
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+        {
+            RB.velocity = new Vector2(-4, -4);
+        }
     }
 }

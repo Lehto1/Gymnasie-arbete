@@ -8,6 +8,7 @@ public class PlayerDeath : MonoBehaviour
 {
     [SerializeField] GameObject DeathObject;
     [SerializeField] GameObject EnemyPosition;
+    public bool IsDead = false;
     void Start()
     {
 
@@ -25,6 +26,7 @@ public class PlayerDeath : MonoBehaviour
 
     IEnumerator FlowerMan()
     {
+        IsDead = true;
         DeathObject.SetActive(true);
         DeathObject.transform.position = new Vector2(transform.position.x, transform.position.y - 0.41f);
         transform.position = new Vector2(2, 100);
